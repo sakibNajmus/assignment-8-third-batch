@@ -1,0 +1,14 @@
+.teams{
+    padding-bottom: 20px;
+    display: inline-flex;
+    margin-left: 45px;
+}
+
+.team-head{
+    text-align: center;
+}
+
+.card-details{
+    display: flex;
+    float: left;
+}
