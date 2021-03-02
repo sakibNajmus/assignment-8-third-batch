@@ -8,8 +8,7 @@ const Home = () => {
     const [teams, setTeams] = useState([]);
 
     // Covid API
-    const [cases, setCases] = useState([])
-    // console.log(cases)
+    // const [cases, setCases] = useState([])
 
     // Using Sports API
     useEffect(() => {
@@ -19,11 +18,11 @@ const Home = () => {
     }, [])
 
     // Using Covid API
-    useEffect(() => {
-        fetch('https://disease.sh/v3/covid-19/countries')
-        .then(res => res.json())
-        .then(data => setCases(data))
-    }, [])
+    // useEffect(() => {
+    //     fetch('https://disease.sh/v3/covid-19/countries')
+    //     .then(res => res.json())
+    //     .then(data => setCases(data))
+    // }, [])
 
     return (
         <div className="all-post">
@@ -32,14 +31,14 @@ const Home = () => {
             <Grid container spacing={3}>
             <Grid item xs>
                 {/* Using Sports API */}
-                {/* {
+                {
                     teams.map(team => <Teams key={team.idTeam} team ={team}></Teams>)
-                } */}
+                }
 
                 {/* Using Covid API */}
-                {
+                {/* {
                     cases.map(team => <Teams key={team.countryInfo._id} team ={team}></Teams>)
-                }
+                } */}
             </Grid>            
             </Grid>
             </Container>

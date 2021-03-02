@@ -18,14 +18,14 @@ function App() {
         </Route>
 
         {/* Using Sports API */}
-        {/* <Route path="/teams/:teamId">
-          <TeamDetails></TeamDetails>
-        </Route> */}
-        
-        {/* Using Covid API */}
-        <Route path="/countries/:country">
+        <Route path="/teams/:teamId">
           <TeamDetails></TeamDetails>
         </Route>
+        
+        {/* Using Covid API */}
+        {/* <Route path="/countries/:country">
+          <TeamDetails></TeamDetails>
+        </Route> */}
       </Switch>
     </Router>
   );
