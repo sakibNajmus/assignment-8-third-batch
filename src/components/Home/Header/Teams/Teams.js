@@ -21,11 +21,24 @@ const useStyles = makeStyles({
 const Teams = (props) => {
     const classes = useStyles();
     // console.log(props)
-    const {idTeam, strDescriptionEN, strTeam} = props.team;
 
+    // Using Sports API
+    // const {idTeam, strDescriptionEN, strTeam} = props.team;
+
+    
+    // Using Covid API
+    const {country, updated, active, countryInfo} = props.team;
+
+    // Using Sports API
+    // const history = useHistory();
+    // const seeMoreButton = () => {
+    //     history.push(`/teams/${idTeam}`)
+    // }
+
+    // Using Covid API
     const history = useHistory();
     const seeMoreButton = () => {
-        history.push(`/teams/${idTeam}`)
+        history.push(`/countries/${country}`)
     }
     return (
         <div className="teams">           
@@ -33,14 +46,22 @@ const Teams = (props) => {
                     <CardActionArea>
                         <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
-                            {strTeam}
+                            {/* {strTeam} */}
+                            {country}
                         </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
-                            {strDescriptionEN.slice(0,70)+"..."}
+                            {/* {strDescriptionEN.slice(0,70)+"..."} */}
+                            {active}
                         </Typography>
                         </CardContent>
                     </CardActionArea>
                     <CardActions>
+                        {/* Using Sports API */}
+                        {/* <Button onClick={seeMoreButton} size="small" color="primary">
+                        See Details
+                        </Button> */}
+
+                        {/* Using Covid API */}
                         <Button onClick={seeMoreButton} size="small" color="primary">
                         See Details
                         </Button>

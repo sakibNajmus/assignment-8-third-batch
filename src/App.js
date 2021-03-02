@@ -17,7 +17,13 @@ function App() {
             <Home></Home>
         </Route>
 
-        <Route path="/teams/:teamId">
+        {/* Using Sports API */}
+        {/* <Route path="/teams/:teamId">
+          <TeamDetails></TeamDetails>
+        </Route> */}
+        
+        {/* Using Covid API */}
+        <Route path="/countries/:country">
           <TeamDetails></TeamDetails>
         </Route>
       </Switch>
