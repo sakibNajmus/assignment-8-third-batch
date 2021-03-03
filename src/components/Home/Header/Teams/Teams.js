@@ -28,6 +28,9 @@ const Teams = (props) => {
     // Using Covid API
     // const {country, updated, active, countryInfo} = props.team;
 
+    // Using Dog API
+    // const {team} = props.team;
+
     // Using Sports API
     const history = useHistory();
     const seeMoreButton = () => {
@@ -39,6 +42,13 @@ const Teams = (props) => {
     // const seeMoreButton = () => {
     //     history.push(`/countries/${country}`)
     // }
+
+    // Using Dog API
+    // const history = useHistory();
+    // const seeMoreButton = () => {
+    //     history.push(`/breed/${props.team}`)
+    // }
+
     return (
         <div className="teams">           
                 <Card className={classes.root}>
@@ -50,6 +60,9 @@ const Teams = (props) => {
 
                             {/* Using Covid API  */}
                             {/* {country} */}
+
+                            {/* Using Dog API  */}
+                            {/* {props.team} */}
                         </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
                             {/* Using Sports API */}
@@ -67,6 +80,11 @@ const Teams = (props) => {
                         </Button>
 
                         {/* Using Covid API */}
+                        {/* <Button onClick={seeMoreButton} size="small" color="primary">
+                        See Details
+                        </Button> */}
+
+                        {/* Using Dog API */}
                         {/* <Button onClick={seeMoreButton} size="small" color="primary">
                         See Details
                         </Button> */}

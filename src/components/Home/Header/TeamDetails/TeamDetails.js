@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
-import { Container } from '@material-ui/core';
+import { Grid, Container } from '@material-ui/core';
 import './TeamDetails.css'
+import BreedDetails from '../../../BreedDetails/BreedDetails';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -34,6 +35,11 @@ const TeamDetails = () => {
     // const [cases, setCases] = useState({})
     // console.log(cases)
 
+    // Using Dog API
+    // const {team} = useParams();
+    // const [breeds, setBreeds] = useState([])
+    // console.log(breeds)
+
     
     // Using Sports API
     useEffect(() => {
@@ -48,6 +54,13 @@ const TeamDetails = () => {
     //     fetch(`https://disease.sh/v3/covid-19/countries/${country}`)
     //     .then(res => res.json())
     //     .then(data => setCases(data))
+    // }, [])
+
+    // Using Dog API
+    // useEffect(() => {
+    //     fetch(`https://dog.ceo/api/breed/${team}/images`)
+    //     .then(res => res.json())
+    //     .then(data => setBreeds(data.message))
     // }, [])
 
     return (
@@ -66,6 +79,19 @@ const TeamDetails = () => {
                 <h1 style={{textAlign:'center'}}>{cases.country}</h1>
                 <h1 style={{textAlign:'center'}}>{cases.active}</h1>
                 <p style={{textAlign:'center'}}><b>Home Venue: </b><em>{cases.active}</em></p>
+            </div> */}
+
+            {/* Using Dog API*/}
+            {/* <div className="all-post">
+                <Container>
+                  <Grid container spacing={3}>
+                    <Grid item xs>
+                        {
+                            breeds.map(bd => <BreedDetails bd ={bd}></BreedDetails>)
+                        }
+                    </Grid>            
+                  </Grid>
+                </Container>
             </div> */}
 
         </Container>

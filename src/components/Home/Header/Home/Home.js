@@ -10,6 +10,10 @@ const Home = () => {
     // Covid API
     // const [cases, setCases] = useState([])
 
+    
+    // Dog API
+    // const [breeds, setBreeds] = useState([])
+
     // Using Sports API
     useEffect(() => {
         fetch('https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=English%20Premier%20League')
@@ -22,6 +26,13 @@ const Home = () => {
     //     fetch('https://disease.sh/v3/covid-19/countries')
     //     .then(res => res.json())
     //     .then(data => setCases(data))
+    // }, [])
+
+    // Using Dog API
+    // useEffect(() => {
+    //     fetch('https://dog.ceo/api/breeds/list')
+    //     .then(res => res.json())
+    //     .then(data => setBreeds(data.message))
     // }, [])
 
     return (
@@ -38,6 +49,11 @@ const Home = () => {
                 {/* Using Covid API */}
                 {/* {
                     cases.map(team => <Teams key={team.countryInfo._id} team ={team}></Teams>)
+                } */}
+
+                {/* Using Dog API */}
+                {/* {
+                    breeds.map(team => <Teams team ={team}></Teams>)
                 } */}
             </Grid>            
             </Grid>

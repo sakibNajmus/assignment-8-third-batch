@@ -16,7 +16,6 @@ function App() {
         <Route path="/home">
             <Home></Home>
         </Route>
-
         {/* Using Sports API */}
         <Route path="/teams/:teamId">
           <TeamDetails></TeamDetails>
@@ -26,6 +25,17 @@ function App() {
         {/* <Route path="/countries/:country">
           <TeamDetails></TeamDetails>
         </Route> */}
+
+        {/* Using Dog API */}
+        {/* <Route path="/breed/:team">
+          <TeamDetails></TeamDetails>
+        </Route> */}
+
+        
+        <Route path="/">
+            <Home></Home>
+        </Route>
+
       </Switch>
     </Router>
   );
